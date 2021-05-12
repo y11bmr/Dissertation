@@ -1,0 +1,43 @@
+@model IList<Athlete>
+
+<h3>Athlete List</h3>
+
+<div class="mt-4 mb-4">
+   <!-- add an action link styled as a button to navigate to Create Action -->
+   <a asp-action="Create" class="btn btn-primary btn-sm">Create Athlete</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Position</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>Injured</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var s in Model) {
+            <tr>
+                <td>@s.Id</td>
+                <td>@s.Name</td>
+                <td>@s.Age</td>
+                <td>@s.Position</td>
+                <td>@s.Height</td>
+                <td>@s.Weight</td>
+                <td>@s.Injured</td>
+               
+                <td><a asp-action="Details" asp-route-id=@s.Id>View</a>  
+                    <!-- edit link  -->
+                    | <a asp-action="Edit" asp-route-id=@s.Id>Edit</a>
+                    <!-- delete link -->
+                    | <a asp-action="Delete" asp-route-id=@s.Id>Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
