@@ -39,6 +39,35 @@ namespace PPS.Web.Controllers
         {
             return View();
         }
+        
+        public IActionResult Administrator()
+        {
+            return View();
+        }
+
+        
+        public IActionResult Manager()
+        {
+            return View();
+        }
+        
+        public IActionResult MedicalTeam()
+        {
+            return View();
+        }
+
+        
+        public IActionResult Physio()
+        {
+            return View();
+        }
+
+        
+        public IActionResult StrenghtConditioningCoach()
+        {
+            //todo 
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
